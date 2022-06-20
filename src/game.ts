@@ -115,11 +115,8 @@ export class Game {
     }
 
     destroyChildren() {
-        for (let i = 0; i <= this.pixi.stage.children.length; i++) {
-            this.pixi.stage.removeChild(this.pixi.stage.children[i])
-            this.pixi.stage.removeChild(this.pixi.stage.children[i])
-            this.pixi.stage.removeChild(this.pixi.stage.children[i])
-            this.pixi.stage.removeChild(this.pixi.stage.children[i])
+        while (this.pixi.stage.children.length != 0) {
+            this.pixi.stage.removeChild(this.pixi.stage.children[0]);
         }
         console.log(this.pixi.stage.children.length);
     }
